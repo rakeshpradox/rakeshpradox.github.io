@@ -1,151 +1,64 @@
-/* --- Grand Fleet General Styles --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* --- Crew Page Specific Styles --- */
+.crew-page-bg {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.alphacoders.com/129/1297607.png') center/cover fixed;
 }
 
-body {
-    overflow-x: hidden;
-    background-color: #0b1a2a; /* Dark, ocean-like background */
-    color: #e2d9c1; /* Weathered parchment color */
-    font-family: 'Georgia', 'Arial', sans-serif;
-}
-
-/* --- Premium Animations --- */
-@keyframes slideDown {
-    from { transform: translateY(-100%); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes slideRight {
-    from { transform: translateX(-150px) scale(0.8); opacity: 0; }
-    to { transform: translateX(0) scale(1); opacity: 1; }
-}
-
-@keyframes fadeInHero {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes btnPulse {
-    0% { box-shadow: 0 0 5px rgba(255, 193, 7, 0.4); }
-    50% { box-shadow: 0 0 20px rgba(255, 193, 7, 0.7); }
-    100% { box-shadow: 0 0 5px rgba(255, 193, 7, 0.4); }
-}
-
-/* --- Nav Bar (Weathered & Elegant) --- */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 60px;
-    background: linear-gradient(to right, #2c1a06, #3e2714); /* Dark wood texture vibe */
-    color: #ffd700; /* Gold accents */
-    animation: slideDown 1s ease-out forwards;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo.pirate-logo {
-    font-family: 'Times New Roman', serif;
-    font-weight: bold;
-    font-size: 1.8rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-    color: #ffca28;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-.nav-links li {
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.nav-links li:hover {
-    color: #fff;
-    text-shadow: 0 0 5px #fff;
-}
-
-/* --- Hero Section with ONE PIECE Banner --- */
-.hero.straw-hat-hero {
-    height: 100vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* High Quality One Piece Wano Banner */
-    background: url('https://images.alphacoders.com/129/1297607.png') center/cover no-repeat;
-    position: relative;
-    color: white;
-}
-
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Darker gradient for premium look */
-    background: radial-gradient(circle at center, rgba(0,0,0,0.2), rgba(0,0,0,0.8));
-    z-index: 1;
-}
-
-.hero-content {
+.crew-container {
+    padding: 60px 20px;
     text-align: center;
-    z-index: 2;
-    padding: 20px;
 }
 
-.pirate-title {
-    font-size: 5rem; /* Massive Title */
-    font-family: 'Georgia', serif; 
+.section-title {
+    font-size: 3rem;
+    color: #ffd700;
+    margin-bottom: 50px;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+.crew-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.crew-card {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ffd700;
+    border-radius: 40px; /* Rounded Boxes as you asked */
+    padding: 30px;
+    width: 300px;
+    transition: 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.crew-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 0 30px #ffd700;
+}
+
+.profile-pic-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%; /* Round Profile */
+    border: 4px solid #ffd700;
+    overflow: hidden;
+}
+
+.profile-pic { width: 100%; height: 100%; object-fit: cover; }
+.member-name { color: white; font-size: 1.5rem; margin-bottom: 5px; }
+.role { color: #ff4757; font-weight: bold; margin-bottom: 15px; }
+.bounty { color: #ffd700; font-weight: bold; font-size: 1.2rem; margin-bottom: 20px; }
+
+.view-profile-btn {
+    background: #ffd700;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
     font-weight: bold;
-    color: #ffd700; 
-    text-shadow: 4px 4px 15px rgba(0,0,0,1);
-    margin-bottom: 10px;
-    animation: slideRight 1.5s ease-out forwards;
-    letter-spacing: 5px;
-}
-
-.pirate-subtitle {
-    font-size: 2rem;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    color: #ffca28;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-    margin: 20px 0;
-    letter-spacing: 3px;
-    animation: fadeInHero 2.5s ease-in forwards;
-    animation-delay: 0.8s;
-}
-
-/* --- EXPLORE THE SEA Button --- */
-.btn-scale.dynamic-btn {
-    padding: 18px 50px;
-    border: 3px solid #ffd700;
-    background: linear-gradient(45deg, #8b0000, #b22222); /* Deep Pirate Red */
-    color: white;
     cursor: pointer;
-    font-size: 1.4rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: transform 0.3s ease, background 0.4s ease;
-    animation: btnPulse 2s infinite;
+    transition: 0.3s;
 }
 
-.btn-scale.rounded-corners {
-    border-radius: 50px; /* Fully rounded corners */
-}
-
-.btn-scale:hover {
-    transform: scale(1.15);
-    background: linear-gradient(45deg, #b22222, #ff4757); 
-    box-shadow: 0 0 30px rgba(255, 71, 87, 0.6);
-}
+.view-profile-btn:hover { background: white; transform: scale(1.1); }
