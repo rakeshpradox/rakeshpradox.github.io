@@ -60,7 +60,7 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav-links li {
@@ -74,75 +74,11 @@ body {
     text-shadow: 0 0 5px #fff;
 }
 
-/* --- Hero Section (Premium Grand Line Experience) --- */
+/* --- Hero Section with ONE PIECE Banner --- */
 .hero.straw-hat-hero {
-    height: 90vh; /* Make it more prominent */
+    height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
-    /* One Piece Banner (Replace with a real high-res one if desired) */
-    background: url('https://w.wallhaven.cc/full/8o/wallhaven-8owvjk.png') center/cover;
-    position: relative;
-    color: white;
-}
-
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, rgba(0,0,0,0.4), rgba(0,0,0,0.8));
-    z-index: 1;
-}
-
-.hero-content {
-    text-align: center;
-    z-index: 2;
-    padding: 20px;
-}
-
-.pirate-title {
-    font-size: 4rem; /* Big later */
-    font-family: 'Pinyon Script', cursive; /* Elegant, cursive Pirate Font */
-    color: #ffd700; /* Gold */
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-    margin-bottom: 10px;
-    animation: slideRight 1.5s ease-out forwards;
-}
-
-.pirate-subtitle {
-    font-size: 1.6rem;
-    font-family: 'Cinzel', serif; /* A different style */
-    color: #ffca28; /* Slightly lighter gold */
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-    margin: 20px 0;
-    letter-spacing: 2px;
-    animation: fadeInHero 2.5s ease-in forwards;
-    animation-delay: 0.8s;
-}
-
-/* --- Dynamic, Rounded, Dynamic Color Button --- */
-.btn-scale.dynamic-btn {
-    padding: 15px 40px;
-    border: 2px solid #ffd700;
-    background: linear-gradient(45deg, #2a1b07, #3a2712); /* Wood & Gold dynamic gradient */
-    color: #ffd700;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: bold;
-    font-family: 'Cinzel', serif;
-    transition: transform 0.3s ease, background 0.4s ease, border-color 0.4s ease;
-    animation: btnPulse 2s infinite;
-}
-
-.btn-scale.rounded-corners {
-    border-radius: 25px; /* Rounded corners */
-}
-
-.btn-scale:hover {
-    transform: scale(1.1);
-    background: linear-gradient(45deg, #3a2712, #5a3d1c); /* Dynamic shift on hover */
-    color: white;
-    border-color: #fff;
-}
+    /* High Quality One Piece Wano Banner */
+    background: url('
